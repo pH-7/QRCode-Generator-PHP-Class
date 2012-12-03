@@ -19,8 +19,8 @@ try
     $oQRC = new QRCode; // Create vCard Object
     $oQRC->fullName('Pierre-Henry Soria') // Add Full Name
         ->nickName('PH7') // Add Nickname
-        ->email('ph7software@gmail.com') // Add Email Address
         ->gender('M') // Add Gender
+        ->email('ph7software@gmail.com') // Add Email Address
         ->impp('phs_7@aol.com') // Add Instant Messenger
         ->url('http://ph-7.github.com') // Add URL Website
         ->note('Hello to all! I am a web developer. As hobbit, I like climbing and swimming ...') // Add Note

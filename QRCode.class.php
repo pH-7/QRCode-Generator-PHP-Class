@@ -229,7 +229,7 @@ class QRCode
     }
 
     /**
-     * Note.
+     * The supplemental information or a comment that is associated with the vCard.
      *
      * @param string $sText
      * @return object this
