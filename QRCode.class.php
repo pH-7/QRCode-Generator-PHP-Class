@@ -229,6 +229,18 @@ class QRCode
     }
 
     /**
+     * Note.
+     *
+     * @param string $sText
+     * @return object this
+     */
+    public function note($sText)
+    {
+        $this->_sData .= 'NOTE:' . $sText . "\n";
+        return $this;
+    }
+
+    /**
      * Bookmark.
      *
      * @param string $sTitle

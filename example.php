@@ -12,12 +12,19 @@ require 'QRCode.class.php';
 try
 {
 
-    $oQRC = (new QRCode) // Create vCard Object
-        ->fullName('Pierre-Henry Soria') // Add Full Name
+    /**
+     * If you have PHP 5.4 or higher, you can instantiate the object like this:
+     * $oQRC = (new QRCode) // Create vCard Object
+     */
+    $oQRC = new QRCode; // Create vCard Object
+    $oQRC->fullName('Pierre-Henry Soria') // Add Full Name
         ->nickName('PH7') // Add Nickname
         ->email('ph7software@gmail.com') // Add Email Address
+        ->gender('M') // Add Gender
         ->impp('phs_7@aol.com') // Add Instant Messenger
         ->url('http://ph-7.github.com') // Add URL Website
+        ->note('Hello to all! I am a web developer. As hobbit, I like climbing and swimming ...') // Add Note
+        ->categories('developer,designer,climber,swimmer') // Add Categories
         ->photo('http://files.phpclasses.org/picture/user/1122955.jpg') // Add Avatar
         ->lang('en-US') // Add Language
         ->finish(); // End vCard
