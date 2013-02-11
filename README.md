@@ -18,4 +18,4 @@ Contact me at: ph7software@gmail.com
 
 ## License
 
-[Lesser General Public License 3](http://www.gnu.org/licenses/lgpl.html) or later; See the LICENSE.txt file.
+[General Public License 3](http://www.gnu.org/licenses/gpl.html) or later; See the LICENSE.txt file.
