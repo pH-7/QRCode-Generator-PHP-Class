@@ -4,8 +4,8 @@
  * @desc             Compatible to vCard 4.0 or higher.
  *
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2012, Pierre-Henry Soria. All Rights Reserved.
- * @license          GNU General Public License.
+ * @copyright        (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
+ * @license          GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  * @version          1.1
  */
 
@@ -219,7 +219,7 @@ class QRCode
     /**
      * The role, occupation, or business category of the vCard object within an organization.
      *
-     * @param string $sRole e.g.: Executive
+     * @param string $sRole e.g., Executive
      * @return object this
      */
     public function role($sRole)
@@ -270,7 +270,7 @@ class QRCode
     /**
      * The language that the person speaks.
      *
-     * @param string $sLang e.g.: en-US
+     * @param string $sLang e.g., en-US
      * @return object this
      */
     public function lang($sLang)
@@ -315,7 +315,7 @@ class QRCode
     public function get($iSize = 150, $sECLevel = 'L', $iMargin = 1)
     {
         $this->_sData = urlencode($this->_sData);
-        return static::API_URL . $iSize . 'x' . $iSize . '&amp;cht=qr&amp;chld=' . $sECLevel . '|' . $iMargin . '&amp;chl=' . $this->_sData;
+        return self::API_URL . $iSize . 'x' . $iSize . '&amp;cht=qr&amp;chld=' . $sECLevel . '|' . $iMargin . '&amp;chl=' . $this->_sData;
     }
 
     /**
