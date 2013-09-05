@@ -14,7 +14,7 @@ Pierre-Henry Soria
 
 ## Contact
 
-Contact me at: ph7software@gmail.com
+Contact me at: *ph7software [at] gmail.com*
 
 ## License
 
