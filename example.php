@@ -3,8 +3,8 @@
  * @title            QR Code Example
  *
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2012, Pierre-Henry Soria. All Rights Reserved.
- * @license          GNU General Public License.
+ * @copyright        (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
+ * @license          GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  */
 
 require 'QRCode.class.php';
