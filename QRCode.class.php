@@ -229,6 +229,21 @@ class QRCode
     }
 
     /**
+     * The organization / company 
+     * (The name and optionally the unit(s) of the organization 
+     * associated with the vCard object. This property is based on the X.520 Organization Name 
+     * attribute and the X.520 Organization Unit attribute.)
+     *
+     * @param string $sRole e.g., Google;GMail Team;Spam Detection Squad
+     * @return object this
+     */
+    public function organization($sOrg)
+    {
+        $this->_sData .= 'ORG:' . $sOrg . "\n";
+        return $this;
+    }
+
+    /**
      * The supplemental information or a comment that is associated with the vCard.
      *
      * @param string $sText
