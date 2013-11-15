@@ -330,7 +330,7 @@ class QRCode
     public function get($iSize = 150, $sECLevel = 'L', $iMargin = 1)
     {
         $this->_sData = urlencode($this->_sData);
-        return self::API_URL . $iSize . 'x' . $iSize . '&amp;cht=qr&amp;chld=' . $sECLevel . '|' . $iMargin . '&amp;chl=' . $this->_sData;
+        return self::API_URL . $iSize . 'x' . $iSize . '&cht=qr&chld=' . $sECLevel . '|' . $iMargin . '&chl=' . $this->_sData;
     }
 
     /**
