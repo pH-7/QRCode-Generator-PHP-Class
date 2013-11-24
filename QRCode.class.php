@@ -340,7 +340,18 @@ class QRCode
      */
     public function display()
     {
-        echo '<p class="center"><img src="' . $this->get() . '" alt="QR Code" /></p>';
+        echo '<p class="center"><img src="' . $this->_cleanUrl($this->get()) . '" alt="QR Code" /></p>';
+    }
+
+    /**
+     * Clean URL.
+     *
+     * @param string $sUrl
+     * @return string
+     */
+    private function _cleanUrl($sUrl)
+    {
+        return str_replace('&', '&amp;', $sUrl);
     }
 
 }
