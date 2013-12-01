@@ -7,14 +7,14 @@
  * @license          GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  */
 
-require 'QRCode.class.php';
+require 'QRCode.class.php'; // Include the QRCode class
 
 try
 {
 
     /**
      * If you have PHP 5.4 or higher, you can instantiate the object like this:
-     * $oQRC = (new QRCode) // Create vCard Object
+     * (new QRCode)->fullName('...')->... // Create vCard Object
      */
     $oQRC = new QRCode; // Create vCard Object
     $oQRC->fullName('Pierre-Henry Soria') // Add Full Name
