@@ -1,5 +1,6 @@
 # QR Code
 
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/pH-7/QRCode-Generator-PHP-Class/badges/quality-score.png?s=e469a64a9ac43a7b4233f5813a7078b08a5b6956)](https://scrutinizer-ci.com/g/pH-7/QRCode-Generator-PHP-Class/)
 
 ## Description
 
@@ -16,7 +17,7 @@ Here's a basic example:
 <?php
 
 require 'QRCode.class.php'; // Include the QRCode class
-  
+
 /**
  * If you have PHP 5.4 or higher, you can instantiate the object like this:
  * (new QRCode)->fullName('...')->... // Create vCard Object
@@ -38,9 +39,9 @@ $oQRC->fullName('Pierre-Henry Soria') // Add Full Name
 $oQRC->display(); // Display
 ```
 
-You also have a sample file here: http://github.com/pH-7/QRCode-Generator-PHP-Class/blob/master/example.php    
-  
-  
+You also have a sample file here: http://github.com/pH-7/QRCode-Generator-PHP-Class/blob/master/example.php
+
+
 ## Server Requirements
 
 PHP 5.2.4 or higher.
