@@ -231,8 +231,8 @@ class QRCode
     /**
      * The organization / company.
      *
-     * The name and optionally the unit(s) of the organization 
-     * associated with the vCard object. This property is based on the X.520 Organization Name 
+     * The name and optionally the unit(s) of the organization
+     * associated with the vCard object. This property is based on the X.520 Organization Name
      * attribute and the X.520 Organization Unit attribute.
      *
      * @param string $sOrg e.g., Google;GMail Team;Spam Detection Squad
