@@ -4,15 +4,15 @@
  * @desc             Compatible to vCard 4.0 or higher.
  *
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2012-2016, Pierre-Henry Soria. All Rights Reserved.
  * @license          GNU General Public License <http://www.gnu.org/licenses/gpl.html>
- * @version          1.1
+ * @version          1.2
  */
 
 class QRCode
 {
 
-    const API_URL = 'http://chart.apis.google.com/chart?chs=';
+    const API_URL = 'https://chart.apis.google.com/chart?chs=';
 
     private $_sData;
 
