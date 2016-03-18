@@ -12,7 +12,7 @@
 class QRCode
 {
 
-    const API_URL = 'https://chart.apis.google.com/chart?chs=';
+    const API_URL = 'https://chart.googleapis.com/chart?chs=';
 
     private $_sData;
 
