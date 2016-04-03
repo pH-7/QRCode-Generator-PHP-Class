@@ -9,6 +9,30 @@ This **QRCode PHP class** allows you to easily generate a simple **QR code** usi
 Here also two video explanation of QR code: http://www.youtube.com/watch?v=B3lrcOhmp9g and http://www.youtube.com/watch?v=IphTJHiKGos
 
 
+## Composer Installation
+
+ You can add it easily in your projec by using [Composer](https://getcomposer.org/).
+
+
+```bash
+$ composer require ph-7/qrcode-generator-php-class
+ ```
+
+Then, include Composer's autoload
+
+```PHP
+require_once 'vendor/autoload.php';
+```
+
+## Manual Installation
+
+If you don't use Composer, you can install it without Composer by simply including the class
+
+```PHP
+require 'QRCode.class.php';
+```
+
+
 ## How to Use
 
 Here's a basic example:
