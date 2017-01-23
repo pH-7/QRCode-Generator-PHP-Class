@@ -49,7 +49,7 @@ $oQRC->fullName('Pierre-Henry Soria') // Add Full Name
     ->email('ph7software@gmail.com') // Add Email Address
     ->impp('phs_7@aol.com') // Add Instant Messenger
     ->url('http://ph-7.github.com') // Add URL Website
-    ->note('Hello to all! I am a web developer. As hobbit, I like climbing and swimming ...') // Add Note
+    ->note('Hello to all! I am a web developer. As hobbies I like climbing and swimming ...') // Add Note
     ->categories('developer,designer,climber,swimmer') // Add Categories
     ->photo('http://files.phpclasses.org/picture/user/1122955.jpg') // Add Avatar
     ->lang('en-US') // Add Language
