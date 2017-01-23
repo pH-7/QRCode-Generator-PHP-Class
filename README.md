@@ -38,10 +38,6 @@ require 'QRCode.class.php';
 Here's a basic example:
 
 ```php
-<?php
-
-require 'QRCode.class.php'; // Include the QRCode class
-
 /**
  * If you have PHP 5.4 or higher, you can instantiate the object like this:
  * (new QRCode)->fullName('...')->... // Create vCard Object
