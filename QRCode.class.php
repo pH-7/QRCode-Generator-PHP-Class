@@ -23,7 +23,6 @@ class QRCode
     {
         $this->_sData = 'BEGIN:VCARD' . "\n";
         $this->_sData .= 'VERSION:4.0' . "\n";
-        return $this;
     }
 
     /**
