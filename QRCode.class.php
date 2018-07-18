@@ -13,15 +13,15 @@ class QRCode
 {
     const API_URL = 'https://chart.googleapis.com/chart?chs=';
 
-    private $_sData;
+    private $sData;
 
     /**
      * Constructor.
      */
     public function __construct()
     {
-        $this->_sData = 'BEGIN:VCARD' . "\n";
-        $this->_sData .= 'VERSION:4.0' . "\n";
+        $this->sData = 'BEGIN:VCARD' . "\n";
+        $this->sData .= 'VERSION:4.0' . "\n";
     }
 
     /**
@@ -33,7 +33,7 @@ class QRCode
      */
     public function name($sName)
     {
-        $this->_sData .= 'N:' . $sName . "\n";
+        $this->sData .= 'N:' . $sName . "\n";
         return $this;
     }
 
@@ -46,7 +46,7 @@ class QRCode
      */
     public function fullName($sFullName)
     {
-        $this->_sData .= 'FN:' . $sFullName . "\n";
+        $this->sData .= 'FN:' . $sFullName . "\n";
         return $this;
     }
 
@@ -57,7 +57,7 @@ class QRCode
      */
     public function address($sAddress)
     {
-        $this->_sData .= 'ADR:' . $sAddress . "\n";
+        $this->sData .= 'ADR:' . $sAddress . "\n";
 
         return $this;
     }
@@ -69,7 +69,7 @@ class QRCode
      */
     public function nickName($sNickname)
     {
-        $this->_sData .= 'NICKNAME:' . $sNickname . "\n";
+        $this->sData .= 'NICKNAME:' . $sNickname . "\n";
         return $this;
     }
 
@@ -80,7 +80,7 @@ class QRCode
      */
     public function email($sMail)
     {
-        $this->_sData .= 'EMAIL;TYPE=PREF,INTERNET:' . $sMail . "\n";
+        $this->sData .= 'EMAIL;TYPE=PREF,INTERNET:' . $sMail . "\n";
         return $this;
     }
 
@@ -91,7 +91,7 @@ class QRCode
      */
     public function workPhone($sVal)
     {
-        $this->_sData .= 'TEL;TYPE=WORK:' . $sVal . "\n";
+        $this->sData .= 'TEL;TYPE=WORK:' . $sVal . "\n";
         return $this;
     }
 
@@ -102,7 +102,7 @@ class QRCode
      */
     public function homePhone($sVal)
     {
-        $this->_sData .= 'TEL;TYPE=HOME:' . $sVal . "\n";
+        $this->sData .= 'TEL;TYPE=HOME:' . $sVal . "\n";
         return $this;
     }
 
@@ -114,7 +114,7 @@ class QRCode
     public function url($sUrl)
     {
         $sUrl = (substr($sUrl, 0, 4) != 'http') ? 'http://' . $sUrl : $sUrl;
-        $this->_sData .= 'URL:' . $sUrl . "\n";
+        $this->sData .= 'URL:' . $sUrl . "\n";
         return $this;
     }
 
@@ -126,7 +126,7 @@ class QRCode
      */
     public function sms($sPhone, $sText)
     {
-        $this->_sData .= 'SMSTO:' . $sPhone . ':' . $sText . "\n";
+        $this->sData .= 'SMSTO:' . $sPhone . ':' . $sText . "\n";
         return $this;
     }
 
@@ -137,7 +137,7 @@ class QRCode
      */
     public function birthday($sBirthday)
     {
-        $this->_sData .= 'BDAY:' . $sBirthday . "\n";
+        $this->sData .= 'BDAY:' . $sBirthday . "\n";
         return $this;
     }
 
@@ -148,7 +148,7 @@ class QRCode
      */
     public function anniversary($sBirthDate)
     {
-        $this->_sData .= 'ANNIVERSARY:' . $sBirthDate . "\n";
+        $this->sData .= 'ANNIVERSARY:' . $sBirthDate . "\n";
         return $this;
     }
 
@@ -159,7 +159,7 @@ class QRCode
      */
     public function gender($sSex)
     {
-        $this->_sData .= 'GENDER:' . $sSex . "\n";
+        $this->sData .= 'GENDER:' . $sSex . "\n";
         return $this;
     }
 
@@ -172,7 +172,7 @@ class QRCode
      */
     public function categories($sCategories)
     {
-        $this->_sData .= 'CATEGORIES:' . $sCategories . "\n";
+        $this->sData .= 'CATEGORIES:' . $sCategories . "\n";
         return $this;
     }
 
@@ -185,7 +185,7 @@ class QRCode
      */
     public function impp($sVal)
     {
-        $this->_sData .= 'IMPP:' . $sVal . "\n";
+        $this->sData .= 'IMPP:' . $sVal . "\n";
         return $this;
     }
 
@@ -208,7 +208,7 @@ class QRCode
             throw new InvalidArgumentException('Invalid format Image!');
         }
 
-        $this->_sData .= 'PHOTO;VALUE=URL;TYPE=' . $sExt . ':' . $sImgUrl . "\n";
+        $this->sData .= 'PHOTO;VALUE=URL;TYPE=' . $sExt . ':' . $sImgUrl . "\n";
 
         return $this;
     }
@@ -222,7 +222,7 @@ class QRCode
      */
     public function role($sRole)
     {
-        $this->_sData .= 'ROLE:' . $sRole . "\n";
+        $this->sData .= 'ROLE:' . $sRole . "\n";
         return $this;
     }
 
@@ -239,7 +239,7 @@ class QRCode
      */
     public function organization($sOrg)
     {
-        $this->_sData .= 'ORG:' . $sOrg . "\n";
+        $this->sData .= 'ORG:' . $sOrg . "\n";
         return $this;
     }
 
@@ -252,7 +252,7 @@ class QRCode
      */
     public function note($sText)
     {
-        $this->_sData .= 'NOTE:' . $sText . "\n";
+        $this->sData .= 'NOTE:' . $sText . "\n";
         return $this;
     }
 
@@ -264,7 +264,7 @@ class QRCode
      */
     public function bookmark($sTitle, $sUrl)
     {
-        $this->_sData .= 'MEBKM:TITLE:' . $sTitle . ';URL:' . $sUrl . "\n";
+        $this->sData .= 'MEBKM:TITLE:' . $sTitle . ';URL:' . $sUrl . "\n";
         return $this;
     }
 
@@ -279,7 +279,7 @@ class QRCode
      */
     public function geo($sLat, $sLon, $iHeight)
     {
-        $this->_sData .= 'GEO:' . $sLat . ',' . $sLon . ',' . $iHeight . "\n";
+        $this->sData .= 'GEO:' . $sLat . ',' . $sLon . ',' . $iHeight . "\n";
         return $this;
     }
 
@@ -292,7 +292,7 @@ class QRCode
      */
     public function lang($sLang)
     {
-        $this->_sData .= 'LANG:' . $sLang . "\n";
+        $this->sData .= 'LANG:' . $sLang . "\n";
         return $this;
     }
 
@@ -305,7 +305,7 @@ class QRCode
      */
     public function wifi($sType, $sSsid, $sPwd)
     {
-        $this->_sData .= 'WIFI:T:' . $sType . ';S' . $sSsid . ';' . $sPwd . "\n";
+        $this->sData .= 'WIFI:T:' . $sType . ';S' . $sSsid . ';' . $sPwd . "\n";
         return $this;
     }
 
@@ -316,8 +316,8 @@ class QRCode
      */
     public function finish()
     {
-        $this->_sData .= 'END:VCARD';
-        $this->_sData = urlencode($this->_sData);
+        $this->sData .= 'END:VCARD';
+        $this->sData = urlencode($this->sData);
         return $this;
     }
 
@@ -332,7 +332,7 @@ class QRCode
      */
     public function get($iSize = 150, $sECLevel = 'L', $iMargin = 1)
     {
-        return self::API_URL . $iSize . 'x' . $iSize . '&cht=qr&chld=' . $sECLevel . '|' . $iMargin . '&chl=' . $this->_sData;
+        return self::API_URL . $iSize . 'x' . $iSize . '&cht=qr&chld=' . $sECLevel . '|' . $iMargin . '&chl=' . $this->sData;
     }
 
     /**
