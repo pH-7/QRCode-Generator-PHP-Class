@@ -4,14 +4,13 @@
  * @desc             Compatible to vCard 4.0 or higher.
  *
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2012-2017, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2012-2018, Pierre-Henry Soria. All Rights Reserved.
  * @license          GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  * @version          1.2
  */
 
 class QRCode
 {
-
     const API_URL = 'https://chart.googleapis.com/chart?chs=';
 
     private $_sData;
@@ -326,6 +325,7 @@ class QRCode
      * @param integer $iSize Default 150
      * @param string $sECLevel Default L
      * @param integer $iMargin Default 1
+     *
      * @return string The API URL configure.
      */
     public function get($iSize = 150, $sECLevel = 'L', $iMargin = 1)
@@ -347,11 +347,11 @@ class QRCode
      * Clean URL.
      *
      * @param string $sUrl
+     *
      * @return string
      */
     private function _cleanUrl($sUrl)
     {
         return str_replace('&', '&amp;', $sUrl);
     }
-
 }
