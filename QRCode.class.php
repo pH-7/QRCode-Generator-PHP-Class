@@ -28,7 +28,8 @@ class QRCode
      * The name of the person.
      *
      * @param string $sName
-     * @return object this
+     *
+     * @return self
      */
     public function name($sName)
     {
@@ -40,7 +41,8 @@ class QRCode
      * The full name of the person.
      *
      * @param string $sFullName
-     * @return object this
+     *
+     * @return self this
      */
     public function fullName($sFullName)
     {
@@ -49,22 +51,21 @@ class QRCode
     }
 
     /**
-     * Delivery address.
-     *
      * @param string $sAddress
-     * @return object this
+     *
+     * @return self
      */
     public function address($sAddress)
     {
         $this->_sData .= 'ADR:' . $sAddress . "\n";
+
         return $this;
     }
 
     /**
-     * Nickname.
-     *
      * @param string $sNickname
-     * @return object this
+     *
+     * @return self
      */
     public function nickName($sNickname)
     {
@@ -73,10 +74,9 @@ class QRCode
     }
 
     /**
-     * Email address.
-     *
      * @param string $sMail
-     * @return object this
+     *
+     * @return self
      */
     public function email($sMail)
     {
@@ -85,10 +85,9 @@ class QRCode
     }
 
     /**
-     * Work Phone.
-     *
      * @param string $sVal
-     * @return object this
+     *
+     * @return self
      */
     public function workPhone($sVal)
     {
@@ -97,10 +96,9 @@ class QRCode
     }
 
     /**
-     * Home Phone.
-     *
      * @param string $sVal
-     * @return object this
+     *
+     * @return self
      */
     public function homePhone($sVal)
     {
@@ -109,10 +107,9 @@ class QRCode
     }
 
     /**
-     * URL address.
-     *
      * @param string $sUrl
-     * @return object this
+     *
+     * @return self
      */
     public function url($sUrl)
     {
@@ -122,11 +119,10 @@ class QRCode
     }
 
     /**
-     * SMS code.
-     *
      * @param string $sPhone
      * @param string $sText
-     * @return object this
+     *
+     * @return self
      */
     public function sms($sPhone, $sText)
     {
@@ -135,10 +131,9 @@ class QRCode
     }
 
     /**
-     * Birthday.
-     *
      * @param string $sBirthday Date in the format YYYY-MM-DD or ISO 8601
-     * @return object this
+     *
+     * @return self
      */
     public function birthday($sBirthday)
     {
@@ -147,10 +142,9 @@ class QRCode
     }
 
     /**
-     * Anniversary.
-     *
      * @param string $sBirthDate Date in the format YYYY-MM-DD or ISO 8601
-     * @return object this
+     *
+     * @return self
      */
     public function anniversary($sBirthDate)
     {
@@ -159,10 +153,9 @@ class QRCode
     }
 
     /**
-     * Gender.
-     *
      * @param string $sSex F = Female. M = Male
-     * @return object this
+     *
+     * @return self
      */
     public function gender($sSex)
     {
@@ -173,8 +166,9 @@ class QRCode
     /**
      * A list of "tags" that can be used to describe the object represented by this vCard.
      *
-     * @param string $sCategory
-     * @return object this
+     * @param string $sCategories
+     *
+     * @return self
      */
     public function categories($sCategories)
     {
@@ -186,31 +180,36 @@ class QRCode
      * The instant messenger (Instant Messaging and Presence Protocol).
      *
      * @param string $sVal
-     * @return object this
+     *
+     * @return self
      */
     public function impp($sVal)
     {
-       $this->_sData .= 'IMPP:' . $sVal . "\n";
-       return $this;
+        $this->_sData .= 'IMPP:' . $sVal . "\n";
+        return $this;
     }
 
     /**
      * Photo (avatar).
      *
      * @param string $sImgUrl URL of the image.
-     * @return object this
+     *
+     * @return self
+     *
      * @throws InvalidArgumentException If the image format is invalid.
      */
     public function photo($sImgUrl)
     {
         $bIsImgExt = strtolower(substr(strrchr($sImgUrl, '.'), 1)); // Get the file extension.
 
-        if ($bIsImgExt == 'jpeg' || $bIsImgExt == 'jpg' || $bIsImgExt == 'png' || $bIsImgExt == 'gif')
+        if ($bIsImgExt == 'jpeg' || $bIsImgExt == 'jpg' || $bIsImgExt == 'png' || $bIsImgExt == 'gif') {
             $sExt = strtoupper($bIsImgExt);
-        else
+        } else {
             throw new InvalidArgumentException('Invalid format Image!');
+        }
 
         $this->_sData .= 'PHOTO;VALUE=URL;TYPE=' . $sExt . ':' . $sImgUrl . "\n";
+
         return $this;
     }
 
@@ -218,7 +217,8 @@ class QRCode
      * The role, occupation, or business category of the vCard object within an organization.
      *
      * @param string $sRole e.g., Executive
-     * @return object this
+     *
+     * @return self
      */
     public function role($sRole)
     {
@@ -234,7 +234,8 @@ class QRCode
      * attribute and the X.520 Organization Unit attribute.
      *
      * @param string $sOrg e.g., Google;GMail Team;Spam Detection Squad
-     * @return object this
+     *
+     * @return self
      */
     public function organization($sOrg)
     {
@@ -246,7 +247,8 @@ class QRCode
      * The supplemental information or a comment that is associated with the vCard.
      *
      * @param string $sText
-     * @return object this
+     *
+     * @return self
      */
     public function note($sText)
     {
@@ -255,11 +257,10 @@ class QRCode
     }
 
     /**
-     * Bookmark.
-     *
      * @param string $sTitle
      * @param string $sUrl
-     * @return object this
+     *
+     * @return self
      */
     public function bookmark($sTitle, $sUrl)
     {
@@ -273,7 +274,8 @@ class QRCode
      * @param string $sLat Latitude
      * @param string $sLon Longitude
      * @param integer $iHeight Height
-     * @return object this
+     *
+     * @return self
      */
     public function geo($sLat, $sLon, $iHeight)
     {
@@ -285,7 +287,8 @@ class QRCode
      * The language that the person speaks.
      *
      * @param string $sLang e.g., en-US
-     * @return object this
+     *
+     * @return self
      */
     public function lang($sLang)
     {
@@ -294,12 +297,11 @@ class QRCode
     }
 
     /**
-     * Wifi.
-     *
      * @param string $sType
      * @param string $sSsid
      * @param string $sPwd
-     * @return object this
+     *
+     * @return self
      */
     public function wifi($sType, $sSsid, $sPwd)
     {
@@ -310,7 +312,7 @@ class QRCode
     /**
      * Generate the QR code.
      *
-     * @return object this
+     * @return self
      */
     public function finish()
     {
