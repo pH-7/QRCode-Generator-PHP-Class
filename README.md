@@ -2,11 +2,12 @@
 
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/pH-7/QRCode-Generator-PHP-Class/badges/quality-score.png?s=e469a64a9ac43a7b4233f5813a7078b08a5b6956)](https://scrutinizer-ci.com/g/pH-7/QRCode-Generator-PHP-Class/)
 
+
 ## Description
 
 **QRCode PHP class** allows you to easily generate a simple **QR code** using **vCard** 4.0 and the Google Chart API.
 
-Here also two video explanation of QR code: http://www.youtube.com/watch?v=B3lrcOhmp9g and http://www.youtube.com/watch?v=IphTJHiKGos
+Here are two videos explaining QR code: http://www.youtube.com/watch?v=B3lrcOhmp9g and http://www.youtube.com/watch?v=IphTJHiKGos
 
 
 ## Composer Installation
