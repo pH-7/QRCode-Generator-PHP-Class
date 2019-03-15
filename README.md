@@ -70,7 +70,7 @@ PHP 5.2.4 or higher.
 
 ## Author
 
-Pierre-Henry Soria
+[Pierre-Henry Soria](http://pierrehenry.be)
 
 
 ## Contact
