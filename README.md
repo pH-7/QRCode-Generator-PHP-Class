@@ -57,7 +57,7 @@ $oQRC->fullName('Pierre-Henry Soria') // Add Full Name
     ->finish(); // End vCard
 
 // echo '<p><img src="' . $oQRC->get(300) . '" alt="QR Code" /></p>'; // Generate and display the QR Code
-$oQRC->display(); // Display
+$oQRC->display(300); // Set size and display QR Code default 150px
 ```
 
 You also have a sample file here: http://github.com/pH-7/QRCode-Generator-PHP-Class/blob/master/example.php
