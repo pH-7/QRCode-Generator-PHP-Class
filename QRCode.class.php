@@ -338,11 +338,12 @@ class QRCode
     /**
      * The HTML code for displaying the QR Code.
      *
+     * @param integer $iSize Default 150
      * @return void
      */
-    public function display()
+    public function display( $iSize = 150)
     {
-        echo '<p class="center"><img src="' . $this->_cleanUrl($this->get()) . '" alt="QR Code" /></p>';
+        echo '<p class="center"><img src="' . $this->_cleanUrl($this->get($iSize)) . '" alt="QR Code" /></p>';
     }
 
     /**
