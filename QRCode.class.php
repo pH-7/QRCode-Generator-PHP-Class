@@ -4,7 +4,7 @@
  * @desc             Compatible to vCard 4.0 or higher.
  *
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2012-2018, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2012-2021, Pierre-Henry Soria. All Rights Reserved.
  * @license          GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  * @version          1.2
  */
@@ -12,6 +12,7 @@
 class QRCode
 {
     const API_URL = 'https://chart.googleapis.com/chart?chs=';
+    const DEFAULT_QR_SIZE = 150;
 
     private $sData;
 
@@ -273,7 +274,7 @@ class QRCode
      *
      * @param string $sLat Latitude
      * @param string $sLon Longitude
-     * @param integer $iHeight Height
+     * @param int $iHeight Height
      *
      * @return self
      */
@@ -324,13 +325,13 @@ class QRCode
     /**
      * Get the URL of QR Code.
      *
-     * @param integer $iSize Default 150
+     * @param int $iSize Default 150
      * @param string $sECLevel Default L
      * @param integer $iMargin Default 1
      *
      * @return string The API URL configure.
      */
-    public function get($iSize = 150, $sECLevel = 'L', $iMargin = 1)
+    public function get($iSize = self::DEFAULT_QR_SIZE, $sECLevel = 'L', $iMargin = 1)
     {
         return self::API_URL . $iSize . 'x' . $iSize . '&cht=qr&chld=' . $sECLevel . '|' . $iMargin . '&chl=' . $this->sData;
     }
@@ -338,10 +339,10 @@ class QRCode
     /**
      * The HTML code for displaying the QR Code.
      *
-     * @param integer $iSize Default 150
+     * @param int $iSize Default 150
      * @return void
      */
-    public function display( $iSize = 150)
+    public function display($iSize = self::DEFAULT_QR_SIZE)
     {
         echo '<p class="center"><img src="' . $this->_cleanUrl($this->get($iSize)) . '" alt="QR Code" /></p>';
     }
